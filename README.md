@@ -24,6 +24,28 @@ services:
       - '5432:5432
 ```
 
+### https://dbeaver.io/
+
+- download
+
+- NOTE: If you can't find you DBs and Tables after you create
+  - Preferences > Connections > Drivers > PostgresSQL > show all databases
+
+```sql
+CREATE TABLE recipes(
+	id serial primary key,
+	name varchar(100),
+	ingredients text,
+	directions text
+);
+
+INSERT INTO recipes (name, ingredients, directions)
+values ('the cake', 'flour, sugar', 'make the cake'),
+('a steak', 'beef, butter', 'make the steak');
+
+select * from recipes;
+```
+
 ## Learn to utilize `pg`
 
 - https://node-postgres.com/
