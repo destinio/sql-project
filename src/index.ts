@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 1337
 
 const app = express()
 
-const db_url = 'postgres://postgres:hello@localhost:5432/recipe_book'
+const db_url = 'postgres://postgres:somepassword@localhost:5433/recipe_book'
 
 app.get('/', async (req, res) => {
   const client = new pg.Client(db_url)
